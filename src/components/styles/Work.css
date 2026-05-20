@@ -191,6 +191,8 @@
 
 .work-image-in {
   position: relative;
+  display: block;
+  width: 100%;
 }
 
 .work-link {
