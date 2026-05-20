@@ -16,13 +16,13 @@ const imageUrls = [
   "/images/react2.webp",
   "/images/javascript.webp",
   "/images/mysql.webp",
-  "/images/python.svg",
-  "/images/c.svg",
-  "/images/cplusplus.svg",
-  "/images/html5.svg",
-  "/images/css3.svg",
-  "/images/tailwindcss.svg",
-  "/images/git.svg",
+  "/images/python.png",
+  "/images/c.png",
+  "/images/cplusplus.png",
+  "/images/html5.png",
+  "/images/css3.png",
+  "/images/tailwindcss.png",
+  "/images/git.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
