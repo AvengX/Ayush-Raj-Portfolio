@@ -106,8 +106,19 @@ const Scene = () => {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+      let isVisible = true;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          isVisible = entry.isIntersecting;
+        },
+        { rootMargin: "100px" }
+      );
+      if (canvasDiv.current) observer.observe(canvasDiv.current);
+
       const animate = () => {
         requestAnimationFrame(animate);
+        if (!isVisible) return;
+
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -127,6 +138,7 @@ const Scene = () => {
       };
       animate();
       return () => {
+        observer.disconnect();
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
