@@ -16,8 +16,8 @@ const Loading = ({ percent }: { percent: number }) => {
         setLoaded(true);
         setTimeout(() => {
           setIsLoaded(true);
-        }, 1000);
-      }, 600);
+        }, 300);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [percent]);
@@ -37,7 +37,7 @@ const Loading = ({ percent }: { percent: number }) => {
             document.getElementsByTagName("main")[0]?.classList.add("main-active");
           }
           setIsLoading(false);
-        }, 900);
+        }, 300);
       }).catch(err => {
         console.error("Failed to load initialFX:", err);
         document.body.style.overflowY = "auto";
