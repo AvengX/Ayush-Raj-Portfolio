@@ -5,16 +5,18 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "AI Voice Assistant (Jarvis)",
-    category: "Gen AI / NLP",
-    tools: "Python, OpenAI API, SpeechRecognition, gTTS",
-    image: "/images/jarvis.png",
+    title: "SnapClass (AI Attendance App)",
+    category: "Computer Vision & Voice Biometrics",
+    tools: "Python, Streamlit, Supabase, Face-Recognition, Resemblyzer",
+    image: "/images/snapclass.png",
+    link: "https://ai-attendance-app-three.vercel.app/",
   },
   {
     title: "Portfolio Website",
     category: "Web Development",
     tools: "HTML5, CSS3, JavaScript, ReactJS, Tailwind",
     image: "/images/portfolio.png",
+    link: "https://github.com/AvengX/Ayush-Raj-Portfolio",
   },
 ];
 
@@ -97,7 +99,7 @@ const Work = () => {
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage image={project.image} alt={project.title} link={project.link} />
                     </div>
                   </div>
                 </div>
